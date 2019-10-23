@@ -1,6 +1,6 @@
 {% set name = "rospkg" %}
-{% set version = "1.1.9" %}
-{% set sha256 = "26a06e5ee07f305bc5e5ac2855fb779fc1207797bc4f9ce303f6d88e4c568fcc" %}
+{% set version = "1.1.10" %}
+{% set sha256 = "735edfb831525e85d02e015bcefd277252fc018ead857dce4889fc60f529ba3e" %}
 
 package:
   name: {{ name|lower }}
@@ -45,3 +45,4 @@ extra:
   recipe-maintainers:
     - wolfv
     - lesteve
+    - seanyen
