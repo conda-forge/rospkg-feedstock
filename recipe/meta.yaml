@@ -26,7 +26,7 @@ requirements:
     - python
     - catkin_pkg
     - pyyaml
-    - distro  # [py>=38]
+    - distro
 
 test:
   commands:
