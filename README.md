@@ -5,11 +5,11 @@ Home: http://wiki.ros.org/rospkg
 
 Package license: BSD-3-Clause
 
-Feedstock license: BSD 3-Clause
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/rospkg-feedstock/blob/master/LICENSE.txt)
 
 Summary: Standalone Python library for the ROS package system
 
-
+Development: https://github.com/ros-infrastructure/rospkg
 
 Current build status
 ====================
