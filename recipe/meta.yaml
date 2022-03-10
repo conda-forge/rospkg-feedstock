@@ -1,6 +1,6 @@
 {% set name = "rospkg" %}
 {% set version = "1.4.0" %}
-{% set sha256 = "e7ad6e4abc0d06ae32ef0fb2243f403b5738c047844173737d48a35b83f4d3b7" %}
+{% set sha256 = "4ab9b55a6db5315b68ce06d2ce181c28d7da73e1e57f9650dba884d6a207e258" %}
 
 package:
   name: {{ name|lower }}
