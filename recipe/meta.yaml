@@ -1,6 +1,6 @@
 {% set name = "rospkg" %}
-{% set version = "1.5.1" %}
-{% set sha256 = "2ad2065ce60dcbdf8c6bec4fc907d05c5a9ce194692ca348e7476dc5c9229270" %}
+{% set version = "1.6.0" %}
+{% set sha256 = "9341c8af5f547888ab484ee61b53d8447b6a52081222d2d5257757ab374c657f" %}
 
 package:
   name: {{ name|lower }}
@@ -12,7 +12,7 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 1
+  number: 0
   script: {{ PYTHON }} -m pip install . --no-deps -vv
   noarch: python
   entry_points:
