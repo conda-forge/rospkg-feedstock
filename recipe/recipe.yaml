@@ -1,0 +1,58 @@
+schema_version: 1
+
+context:
+  version: "1.6.3"
+
+package:
+  name: rospkg
+  version: ${{ version }}
+
+source:
+  url: https://github.com/ros-infrastructure/rospkg/archive/${{ version }}.tar.gz
+  sha256: 81cf8bcfbbc7fbd8a2b6b75a94fcdaca355f2c0c56228c4996d1bd1e486d1fe9
+
+build:
+  number: 0
+  script: python -m pip install . --no-deps -vv
+  noarch: python
+  python:
+    entry_points:
+      - rosversion = rospkg.rosversion:main
+
+requirements:
+  host:
+    - python ${{ python_min }}.*
+    - pip
+    - setuptools
+  run:
+    - python >=${{ python_min }}
+    - catkin_pkg
+    - pyyaml
+    - distro
+
+tests:
+  - python:
+      imports:
+        - rospkg
+      python_version:
+        - ${{ python_min }}.*
+        - "*"
+  - requirements:
+      run:
+        - python ${{ python_min }}.*
+    script:
+      - rosversion --help
+      - rosversion --distro
+
+about:
+  homepage: http://wiki.ros.org/rospkg
+  license: BSD-3-Clause
+  license_file: LICENSE
+  summary: Standalone Python library for the ROS package system
+  repository: https://github.com/ros-infrastructure/rospkg
+
+extra:
+  recipe-maintainers:
+    - Tobias-Fischer
+    - wolfv
+    - seanyen
